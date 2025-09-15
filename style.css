@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/a4_speed/A4SPEED-Bold.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'MyFont';
+}
+
+nav {
+    position: fixed;
+    top: 10;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.); /* Cor de fundo do menu */
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: animate 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #fff;
+    color: #000;
+}
+
+.header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.header-content {
+    max-width: 800px; /* Largura máxima do conteúdo */
+    padding: 20px; /* Espaçamento interno */
+    color: #fff; /* Cor do texto */
+    display: flex; /* Exibição flexível para alinhar itens */
+    justify-content: center; /* Alinhamento vertical central */
+    align-items: center; /* Alinhamento horizontal central */ /* Alinhamento do texto */
+    margin: 0 auto;
+    text-align: center;
+}
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/a4_speed/A4SPEED-Bold.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+.main-content{
+    padding-top: 0; 
+    /* Espaço para compensar a altura do menu fixo */
+}
+.neon-border {
+    display: inline-block;
+    position: relative;
+    width: 100%; /* Ajusta a largura do contêiner para ocupar toda a largura disponível */
+    margin-top: 45px; /* Margem acima da div .neon-border */
+    margin-left: 100px; /* Margem à direita da div .neon-border */
+    text-align: center; /* Alinhar o conteúdo ao centro */
+    align-items: center;
+}
+
+.neon-border img {
+    display: block;
+    width: 2090px; /* Ajusta a largura da imagem para ocupar toda a largura do contêiner */
+    max-width: 1760px; /* Remove o limite máximo de largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px;
+}
+
+    
+    
+
+
+
+#HOME {
+
+    background: linear-gradient(-45deg, rgb( 27,17,69), rgb(65,34,121), rgb(16,11,31), rgb(135,73,188), rgb(13, 2, 25));
+    background-size: 400% 400%;
+    animation: animate 15s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.section {
+    min-height: 100vh;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#FABRICANTES {
+    min-height: 100vh; /* Altura mínima de 100% da altura da viewport */
+    padding: 3rem; /* Espaçamento interno */
+    display: flex;
+    flex-direction: column; /* Direção da flexbox para coluna */
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    align-items: center; /* Alinha horizontalmente ao centro */
+    background-color: rgb(13,2,25); /* Cor de fundo */
+    overflow: hidden; /* Oculta o conteúdo que transborda */
+    transform: scale(1); /* Sem escala, mantém o tamanho normal */
+}
+
+#FABRICANTES .header-content {
+    max-width: 800px; /* Largura máxima do conteúdo */
+    padding: 20px; /* Espaçamento interno */
+    color: #fff; /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    margin: 0;
+}
+
+
+#FABRICANTES .button-group {
+    margin-top: 110px; /* Espaçamento acima dos botões ajustado */
+    display: flex; /* Exibição flexível para alinhar itens */
+    flex-direction: column; /* Alinha os botões verticalmente */
+    align-items: flex-end; /* Alinha o grupo de botões à direita */
+    justify-content: flex-start; /* Alinha os botões ao topo verticalmente */
+    position: absolute; /* Permite posicionar o grupo de botões com mais controle */
+    right: 400px; /* Ajusta a distância do lado direito */
+}
+
+#FABRICANTES .estudo,
+#FABRICANTES .trabalho,
+#FABRICANTES .jogos {
+    font-family: 'MyFont';
+    padding: 40px 90px; /* Tamanho dos botões */
+    margin: 70px 0; /* Espaço entre os botões */
+    border: none;
+    outline: none;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+#FABRICANTES .estudo::after,
+#FABRICANTES .trabalho::after,
+#FABRICANTES .jogos::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+
+#FABRICANTES .estudo::before,
+#FABRICANTES .trabalho::before,
+#FABRICANTES .jogos::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(45deg, rgb(192, 45, 45), rgb(0, 11, 216), rgb(252, 214, 0), rgb(59, 87, 53), rgb(131, 96, 165));
+    background-size: 600%;
+    filter: blur(8px);
+    border-radius: 10px;
+    z-index: -1;
+    opacity: 0;
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+#FABRICANTES .estudo:hover::before,
+#FABRICANTES .trabalho:hover::before,
+#FABRICANTES .jogos:hover::before {
+    opacity: 1;
+}
+
+#FABRICANTES .estudo:active::after,
+#FABRICANTES .trabalho:active::after,
+#FABRICANTES .jogos:active::after {
+    background: transparent;
+}
+
+#FABRICANTES .estudo:active,
+#FABRICANTES .trabalho:active,
+#FABRICANTES .jogos:active {
+    color: #1f14be;
+    font-weight: bold;
+}
+
+
+
+
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Estilização do contêiner COMPONENTES */
+#COMPONENTES {
+  min-height: 200px;
+  padding: 250px;
+  background-color: rgb(13, 2, 32); /* Use background-color em vez de background-image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  width: 1500px;
+  max-width: 110%; /* Limita a largura máxima do carrossel */
+  margin-top: -150px;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  min-width: 100px;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+input[type="radio"] {
+  display: none; /* Esconde os controles de rádio */
+}
+
+#slide1:checked ~ .carousel-inner {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .carousel-inner {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .carousel-inner {
+  transform: translateX(-200%);
+}
+
+#slide4:checked ~ .carousel-inner {
+  transform: translateX(-300%);
+}
+
+#slide5:checked ~ .carousel-inner {
+  transform: translateX(-400%);
+}
+
+#slide6:checked ~ .carousel-inner {
+  transform: translateX(-500%);
+}
+
+#slide7:checked ~ .carousel-inner {
+  transform: translateX(-600%);
+}
+
+#slide8:checked ~ .carousel-inner {
+    transform: translateX(-700%);
+  }
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.801);
+  padding: 10px;
+  border: none;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.carousel-control:hover {
+  background-color: rgba(169, 59, 212, 0.8);
+}
+
+
+#SOBRENOS {
+  min-height: 100vh;
+  padding: 3rem;
+  background-color: black; /* Define o fundo da seção */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover; /* Garante que o fundo se ajuste ao tamanho da seção */
+  position: relative; /* Adiciona essa linha */
+}
+
+#SOBRENOS img {
+  max-width: 70%; /* Ajuste conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Garante que a imagem se comporte como um bloco */
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+.frame-container {
+max-width: 250PX;
+  position: absolute; /* Adiciona essa linha */
+  bottom: 0; /* Posiciona no lado inferior */
+  left: 100PX; /* Posiciona no lado esquerdo */
+
+  padding: 1rem; /* Adiciona um pouco de espaço */
+}
+
+.frame-container p {
+  margin-bottom: 0.5rem; /* Adiciona um pouco de espaço entre o texto e o frame */
+  color: aliceblue;
+}
+
+ 
